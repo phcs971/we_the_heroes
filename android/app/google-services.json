@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "48602672133",
+    "firebase_url": "https://we-the-heroes.firebaseio.com",
+    "project_id": "we-the-heroes",
+    "storage_bucket": "we-the-heroes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48602672133:android:6b3fdb865dcd3e716a806c",
+        "android_client_info": {
+          "package_name": "com.example.we_the_heroes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48602672133-4upeeltjgp8jlnkosva3spcnbe3j5v2q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.we_the_heroes",
+            "certificate_hash": "41d7facda8750a90597998a31b1ec4e8f20f08f9"
+          }
+        },
+        {
+          "client_id": "48602672133-aghsm8efdd8coq47si98tt1nsuliqj4k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs6hADcCFORAgc4E-KdF0l3Wo992ZHWKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48602672133-aghsm8efdd8coq47si98tt1nsuliqj4k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
