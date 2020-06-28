@@ -1,5 +1,6 @@
 export './pages/home/index.dart';
 export './pages/login/index.dart';
+export './pages/signup/index.dart';
 
 class Routes {
   Routes._();
