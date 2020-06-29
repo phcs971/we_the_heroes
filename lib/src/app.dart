@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:flutter/services.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -11,6 +10,10 @@ import './services/auth.dart';
 import './utils/texts.dart';
 import './utils/constants.dart';
 import './templates/profile.dart';
+
+//TODO: 6. Atos Atuais -> status: 1 && heroId: uid
+//TODO: 7. Historico de Casos -> status: 2 && heroId: uid
+//TODO: 8. Options -> Language / Mudar Nome / Apagar Conta / Apagar Casos
 
 class WeTheHeroesApp extends StatefulWidget {
   final String userId;
@@ -192,11 +195,23 @@ class _WeTheHeroesAppState extends State<WeTheHeroesApp> {
       theme: ThemeData(
         primaryColor: Color(0xFFA21302), // #A21302
         accentColor: Color(0xFFC9A700), // #C9A700
+        backgroundColor: Colors.white, // #FFF
       ),
       routes: {
-        Routes.homeRoute: (ctx) =>
-            userId == null ? Login(loginEmail, loginGoogle) : Home(logout),
+        Routes.homeRoute: (ctx) => userId == null
+            ? Login(loginEmail, loginGoogle)
+            : profile == null
+                ? Scaffold(body: Center(child: CircularProgressIndicator()))
+                : Home(logout, database, profile),
         Routes.signupRoute: (ctx) => SignUp(signUp),
+        Routes.newCaseRoute: (ctx) => NewCase(profile.id),
+        Routes.caseRoute: (ctx) => CasePage(profile, database, updateProfile),
+        Routes.myCasesRoute: (ctx) => MyCases(logout, database, profile),
+        Routes.currentCasesRoute: (ctx) =>
+            CurrentCases(logout, database, profile),
+        Routes.caseHistoryRoute: (ctx) =>
+            CaseHistory(logout, database, profile),
+        Routes.optionsRoute: (ctx) => Options(),
       },
       initialRoute: Routes.homeRoute,
     );

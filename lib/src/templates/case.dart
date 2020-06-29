@@ -24,17 +24,24 @@ class Case {
     this.locale = map['locale'];
   }
 
-  toMap() => {
-        id: {
-          'ownerId': ownerId,
-          'heroId': heroId,
-          'title': title,
-          'description': description,
-          'hp': hp,
-          'status': status.index,
-          'locale': locale,
-        }
+  Map toMap() => {
+        'ownerId': ownerId,
+        'heroId': heroId,
+        'title': title,
+        'description': description,
+        'hp': hp,
+        'status': status.index,
+        'locale': locale,
       };
+
+  bool equalTo(map) =>
+      ownerId == map['ownerId'] &&
+      heroId == map['heroId'] &&
+      title == map['title'] &&
+      description == map['description'] &&
+      hp == map['hp'] &&
+      status == CaseStatus.values[map['status']] &&
+      locale == map['locale'];
 }
 
-enum CaseStatus { TO_DO, IN_PROGRESS, COMPLETED, FINISHED }
+enum CaseStatus { TO_DO, IN_PROGRESS, COMPLETED }
