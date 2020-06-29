@@ -177,6 +177,44 @@ class Texts {
         'Você não está ajudando ninguêm agora, clique num caso e aceite-o.'
       ][_lang];
 
+  // CASE HISTORY
+
+  static String get nohistory => [
+        'You have no finished cases yet, work on one and click to finish it.',
+        'Você não tem nenhum caso finalizado ainda, conclua um e clique em finalizá-lo.'
+      ][_lang];
+
+  // OPTIONS
+
+  static String get applang => [
+        'Choose app language',
+        'Mudar língua do aplicativo',
+      ][_lang];
+  static String get changename => [
+        'Change your Name:',
+        'Mudar seu Nome:',
+      ][_lang];
+  static String get dangerZOne => [
+        'Danger Zone',
+        'Área Perigosa',
+      ][_lang];
+  static String get deleteCases => [
+        'Delete Cases',
+        'Deletar Casos',
+      ][_lang];
+  static String get deleteAccount => [
+        'Delete Account',
+        'Deletar Conta',
+      ][_lang];
+  static String get resetAccount => [
+        'Reset Account',
+        'Resetar Conta',
+      ][_lang];
+  static String get cannotUndo => [
+        'Are you sure you want to do this? You cannot undo it later.',
+        'Tem certeza que quer fazer isso? Você não poderá desfazer depois.'
+      ][_lang];
+
   // COMUM
 
   static String get hero => [
@@ -206,6 +244,10 @@ class Texts {
   static String get save => [
         'Save and Exit',
         'Salvar e Sair',
+      ][_lang];
+  static String get saveonly => [
+        'Save',
+        'Salvar',
       ][_lang];
   static String get no => [
         'No',

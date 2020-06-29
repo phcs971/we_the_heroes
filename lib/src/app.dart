@@ -11,10 +11,6 @@ import './utils/texts.dart';
 import './utils/constants.dart';
 import './templates/profile.dart';
 
-//TODO: 6. Atos Atuais -> status: 1 && heroId: uid
-//TODO: 7. Historico de Casos -> status: 2 && heroId: uid
-//TODO: 8. Options -> Language / Mudar Nome / Apagar Conta / Apagar Casos
-
 class WeTheHeroesApp extends StatefulWidget {
   final String userId;
   final int language;
@@ -211,7 +207,8 @@ class _WeTheHeroesAppState extends State<WeTheHeroesApp> {
             CurrentCases(logout, database, profile),
         Routes.caseHistoryRoute: (ctx) =>
             CaseHistory(logout, database, profile),
-        Routes.optionsRoute: (ctx) => Options(),
+        Routes.optionsRoute: (ctx) =>
+            Options(logout, database, profile, updateProfile, updateLang),
       },
       initialRoute: Routes.homeRoute,
     );

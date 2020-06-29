@@ -110,7 +110,10 @@ class MenuDrawer extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {
-                          Navigator.of(context)..pop()..pop();
+                          Navigator.of(context)
+                            ..pop()
+                            ..pop()
+                            ..pushReplacementNamed(Routes.homeRoute);
                           logout();
                         },
                       ),

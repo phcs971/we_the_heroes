@@ -103,7 +103,7 @@ class _CaseHistoryState extends State<CaseHistory> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    Texts.noAct,
+                                    Texts.nohistory,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: Theme.of(context).primaryColor,

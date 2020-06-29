@@ -59,7 +59,7 @@ class Login extends StatelessWidget {
                         textAlignVertical: TextAlignVertical.center,
                         keyboardType: TextInputType.emailAddress,
                         cursorColor: Theme.of(context).primaryColor,
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.left,
                         textInputAction: TextInputAction.next,
                         onSubmitted: (_) =>
                             FocusScope.of(context).requestFocus(passNode),
@@ -71,7 +71,6 @@ class Login extends StatelessWidget {
                           hintText: Texts.email,
                           border: InputBorder.none,
                           prefixIcon: Icon(Icons.email, size: h * 0.75),
-                          suffixIcon: Container(width: h * 0.75),
                         ),
                       ),
                     ),
@@ -98,7 +97,7 @@ class Login extends StatelessWidget {
                           FocusScope.of(context).unfocus();
                           loginHandler(email.text, password.text, context);
                         },
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.left,
                         textInputAction: TextInputAction.go,
                         style: TextStyle(
                           color: Theme.of(context).primaryColor,
@@ -108,7 +107,6 @@ class Login extends StatelessWidget {
                           hintText: Texts.password,
                           border: InputBorder.none,
                           prefixIcon: Icon(Icons.lock, size: h * 0.75),
-                          suffixIcon: Container(width: h * 0.75),
                         ),
                       ),
                     ),
@@ -239,28 +237,24 @@ class Login extends StatelessWidget {
                             if (emailValidator.hasMatch(email.text)) {
                               Auth()
                                   .redefinePassword(email.text)
-                                  .then(
-                                    (_) =>
-                                        scaffoldKey.currentState.showSnackBar(
-                                      SnackBar(
-                                        content: Text(
-                                          Texts.emailsent,
-                                          style: TextStyle(color: color),
+                                  .then((_) =>
+                                      scaffoldKey.currentState.showSnackBar(
+                                        SnackBar(
+                                          content: Text(
+                                            Texts.emailsent,
+                                            style: TextStyle(color: color),
+                                          ),
                                         ),
-                                      ),
-                                    ),
-                                  )
-                                  .catchError(
-                                    (_) =>
-                                        scaffoldKey.currentState.showSnackBar(
-                                      SnackBar(
-                                        content: Text(
-                                          Texts.userNotFound,
-                                          style: TextStyle(color: color),
+                                      ))
+                                  .catchError((_) =>
+                                      scaffoldKey.currentState.showSnackBar(
+                                        SnackBar(
+                                          content: Text(
+                                            Texts.userNotFound,
+                                            style: TextStyle(color: color),
+                                          ),
                                         ),
-                                      ),
-                                    ),
-                                  );
+                                      ));
                             } else {
                               scaffoldKey.currentState.showSnackBar(
                                 SnackBar(

@@ -196,6 +196,7 @@ class _MyCasesState extends State<MyCases> {
                                         return Text(
                                           snapshot.data,
                                           overflow: TextOverflow.ellipsis,
+                                          maxLines: 2,
                                         );
                                       }
                                       return FittedBox(child: Text(c.title));
@@ -204,7 +205,7 @@ class _MyCasesState extends State<MyCases> {
                                   ),
                                   subtitle: Text(
                                     c.description,
-                                    maxLines: 2,
+                                    maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.justify,
                                   ),

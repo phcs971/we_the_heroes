@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>48602672133-ji5pc0psm9p8rm293arelg7hjlq68a70.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.48602672133-ji5pc0psm9p8rm293arelg7hjlq68a70</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>48602672133-4upeeltjgp8jlnkosva3spcnbe3j5v2q.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBUuymVvXHwHHIJCsUrH34WsKAuBB8UGak</string>
+	<key>GCM_SENDER_ID</key>
+	<string>48602672133</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.we-the-heroes</string>
+	<key>PROJECT_ID</key>
+	<string>we-the-heroes</string>
+	<key>STORAGE_BUCKET</key>
+	<string>we-the-heroes.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:48602672133:ios:6e905960c312e3d36a806c</string>
+	<key>DATABASE_URL</key>
+	<string>https://we-the-heroes.firebaseio.com</string>
+</dict>
+</plist>

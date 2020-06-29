@@ -72,4 +72,6 @@ class Auth {
 
   Future redefinePassword(email) async =>
       await auth.sendPasswordResetEmail(email: email);
+
+  Future removeAccount() async => await (await auth.currentUser()).delete();
 }
