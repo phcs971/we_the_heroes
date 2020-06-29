@@ -85,7 +85,12 @@ class _WeTheHeroesAppState extends State<WeTheHeroesApp> {
     if (result != null) {
       var snap = await usersRef.child(result.uid).once();
       if (snap.value == null) {
-        createAccount(Profile(hp: 0, name: result.displayName, id: result.uid));
+        createAccount(Profile(
+          hp: 0,
+          name: result.displayName,
+          id: result.uid,
+          email: result.email,
+        ));
       }
       login(result.uid);
     }
@@ -101,6 +106,7 @@ class _WeTheHeroesAppState extends State<WeTheHeroesApp> {
       await createAccount(Profile(
         id: result.uid,
         hp: 0,
+        email: email,
         name: nome,
       ));
       await login(result.uid);
@@ -199,7 +205,7 @@ class _WeTheHeroesAppState extends State<WeTheHeroesApp> {
             : profile == null
                 ? Scaffold(body: Center(child: CircularProgressIndicator()))
                 : Home(logout, database, profile),
-        Routes.signupRoute: (ctx) => SignUp(signUp),
+        Routes.signupRoute: (ctx) => SignUp(signUp, loginGoogle),
         Routes.newCaseRoute: (ctx) => NewCase(profile.id),
         Routes.caseRoute: (ctx) => CasePage(profile, database, updateProfile),
         Routes.myCasesRoute: (ctx) => MyCases(logout, database, profile),

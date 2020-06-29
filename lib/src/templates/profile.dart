@@ -2,7 +2,7 @@ class Profile {
   String id, name, email;
   int hp;
 
-  Profile({this.id, this.name, this.hp});
+  Profile({this.id, this.name, this.hp, this.email});
 
   Profile.fromMap(map, this.id) {
     this.name = map['name'];

@@ -16,7 +16,7 @@ class Texts {
         'EMAIL',
       ][_lang];
   static String get password => [
-        'PASS',
+        'PASSWORD',
         'SENHA',
       ][_lang];
   static String get name => [
@@ -49,7 +49,38 @@ class Texts {
       ][_lang];
 
   //SIGN UP PAGE
-
+  static String get confirmPassword => [
+        'CONFIRM PASSWORD',
+        'CONFIRME A SENHA',
+      ][_lang];
+  static String get signUpPart1 => [
+        'Let\'s create your account!\nWe\'ll start with your email',
+        'Vamos criar sua conta!\nComeçaremos com seu email',
+      ][_lang];
+  static String get signUpPart2 => [
+        'Sorry! I forgot to ask...\nWhat\'s your name?',
+        'Desculpa! Nem perguntei...\nQual seu nome?',
+      ][_lang];
+  static String get signUpPart3 => [
+        'Nice! Time for your Password\nRelax, I won\'t look',
+        'Belo nome! Agora vem sua senha\nRelaxa, não vou olhar',
+      ][_lang];
+  static String get passHelper => [
+        'The password must contain at least:\n  One upper case (A-Z)\n  One lower case (a-z)\n  One numeric digit (0-9)\nAnd it must be between 6 to 24 characteres long',
+        'A sua senha deve conter no mínimo:\n  Uma letra maiúscula (A-Z)\n  Uma letra minúscula (a-z)\n  Um dígito numérico (0-9)\nE deve conter 6 a 24 caractéres',
+      ][_lang];
+  static String get signUpPart4 => [
+        'We need it one more time\nConfirm your Password',
+        'Você pode repetir?\nConfirme sua senha',
+      ][_lang];
+  static String get signUpPart5 => [
+        'You are all done,\nclick on the + icon\nand it will be created. \nThanks you!\nSee you around!',
+        'Pronto, acabamos!\nClique no ícone de + e\nsua conta será criada.\nMuito Obrigado!\nNos vemos por ai!',
+      ][_lang];
+  static String get haveAccount => [
+        'Already have an account?',
+        'Já possui uma conta?',
+      ][_lang];
   static String get emailsent => [
         'Email Sent',
         'Email Enviado',

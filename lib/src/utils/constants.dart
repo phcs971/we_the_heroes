@@ -6,5 +6,9 @@ const fbOptions = FirebaseOptions(
   googleAppID: '1:48602672133:android:6b3fdb865dcd3e716a806c',
 );
 
+final Duration animationDuration = Duration(milliseconds: 300);
+
 final RegExp emailValidator = RegExp(
     r"^([a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]{2,})@([a-zA-Z0-9]{2,})\.([a-zA-Z]{2,})");
+final RegExp passValidator =
+    RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,24}$');
